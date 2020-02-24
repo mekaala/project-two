@@ -18,21 +18,15 @@
 
                 <li>
 
-				    <a href="atlanta/region/{{ id }}">
-                        {{ atlanta.region.area }}
+                        {{ area }}
 			
-                        <img id="photo">
-
-                            {{ atlanta.region.area.photo }}
+                        <img src="{{ photo }}"/>
                     
-                        </img>
-                    </a>
-
                 </li>
 
             {{/each }}
 
-        <a href="/{{ atlanta.region }}/edit">Edit Region</a>
+        <a href="/{{ region }}/edit">Edit Region</a>
 
         <a>Add New Area</a>
 
