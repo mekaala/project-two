@@ -1,5 +1,7 @@
 const express = require('express')
-const PhotoModel = require('../models/photo.js')
+const Atlanta = require('../models/atlanta.js');
+const Region = require('../models/region.js');
+const Area = require('../models/area.js');
 const photoRouter = express.Router()
 
 /* Step 4
@@ -11,9 +13,12 @@ const photoRouter = express.Router()
  *
  * TODO: delete this handler; it's just a sample
  */ 
+
 photoRouter.get('/', (req, res) => {
-  res.send('hello, world');
-})
+  Atlanta.find().then(atlanta => {
+      res.render('photos/atlanta', { atlanta });
+  });
+});
 
 /* Step 6
  *
