@@ -27,3 +27,7 @@ Atlanta.deleteMany()
   .then(() => {
     return Atlanta.create(newAtlanta)
   });
+  Region.deleteMany()
+      .then(() => {
+          return Region.create(newRegion)
+      });
