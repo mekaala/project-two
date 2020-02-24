@@ -9,7 +9,10 @@ const AreaSchema = new mongoose.Schema({
   name: String,
   description: String,
   rules: String,
-  photo: String
+  photo: {
+    type: String,
+    required: true,
+  }
 })
 
 module.exports = mongoose.model('Area', AreaSchema);

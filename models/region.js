@@ -6,8 +6,11 @@ const mongoose = require('../db/connection.js')
  *
  */
 const RegionSchema = new mongoose.Schema({
-  area: String,
-  photo: String,
+  area: {
+    type: String,
+    required: true,
+  },
+  photo: String
 })
 
 module.exports = mongoose.model('Region', RegionSchema);

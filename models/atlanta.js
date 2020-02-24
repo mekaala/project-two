@@ -6,8 +6,10 @@ const mongoose = require('../db/connection.js')
  *
  */
 const AtlantaSchema = new mongoose.Schema({
-  region: String,
-  location: String,
+  region: {
+    type: String,
+    required: true,
+  },
 })
 
 module.exports = mongoose.model('Atlanta', AtlantaSchema);
