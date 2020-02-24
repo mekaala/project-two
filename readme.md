@@ -19,3 +19,9 @@ What should the map look like?
 <img src="wireframes/Web 1920 – 1.png">
 <img src="wireframes/Web 1920 – 3.png">
 <img src="wireframes/Web 1920 – 4.png">
+
+
+What can be added in:
+Atlanta - new regions
+Region - new areas
+Area - new photos
