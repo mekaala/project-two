@@ -10,3 +10,7 @@ Display photographs detailing my work.
 Use as a sort of photography portfolio?
 
 Inspiration: PuppyPalsApp
+
+A Breath of the Wild Map that displays the area, the shrines in that area, and the Korok seeds available?
+Use a map of the city: Atlanta
+What should the map look like?
