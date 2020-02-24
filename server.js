@@ -2,7 +2,7 @@ const express = require('express')
 const app = express()
 const methodOverride = require('method-override')
 
-const templateRouter = require('./controllers/template.js')
+const photoRouter = require('./controllers/photo.js')
 
 app.use(express.urlencoded({extended: true}))
 
@@ -15,7 +15,7 @@ app.use(express.static(__dirname+"/public"))
 app.set('view engine', 'hbs')
 
 
-app.use('/helloworld', templateRouter)
+app.use('/', photoRouter)
 
 const PORT = process.env.PORT || 3000 
 
