@@ -1,11 +1,41 @@
 <main>
-    <ul>
 
-        {{#each region }}
+	<div class = "region-show-page">
 
-            <li>{{ area }}</li>
+		<h2>You are viewing:
 
-        {{/each }}
+			{{ region }}
 
-    </ul>
+		</h2>
+
+		<a href="/">Return to Home Page</a>
+
+        <h3>Areas: </h3>
+
+        <ul>
+
+            {{#each region }}
+
+                <li>
+
+				    <a href="atlanta/region/{{ id }}">
+                        {{ atlanta.region.area }}
+			
+                        <img id="photo">
+
+                            {{ atlanta.region.area.photo }}
+                    
+                        </img>
+                    </a>
+
+                </li>
+
+            {{/each }}
+
+        <a href="/{{ atlanta.region }}/edit">Edit Region</a>
+
+        <a>Add New Area</a>
+
+	</div>
+
 </main>
