@@ -15,7 +15,7 @@ A Breath of the Wild Map that displays the area, the shrines in that area, and t
 Use a map of the city: Atlanta
 What should the map look like?
 
-<img src="wireframes/Web 1920 – 1.png">
 <img src="wireframes/Web 1920 – 2.png">
+<img src="wireframes/Web 1920 – 1.png">
 <img src="wireframes/Web 1920 – 3.png">
 <img src="wireframes/Web 1920 – 4.png">
