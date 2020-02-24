@@ -4,14 +4,14 @@ let Area = require('../models/area.js');
 
 let newAtlanta = [
     {
-        region: 'Midtown'
+        region: 'Midtown',
     },
     {
         region: 'Brookhaven'
     }
 ]
 
-let newRegions = [
+let newRegion = [
     {
         area: 'Fourth Ward',
         photo: 'https://www.asce.org/uploadedImages/Issues_and_Advocacy/Our_Initiatives/Sustainability/Sustainable_Project_Profiles/Atlanta%20BeltLine%20Historic%20Fourth%20Ward%20Park.jpg'
@@ -23,11 +23,16 @@ let newRegions = [
     },
 ]
 
+
 Atlanta.deleteMany()
-  .then(() => {
-    return Atlanta.create(newAtlanta)
-  });
-  Region.deleteMany()
-      .then(() => {
-          return Region.create(newRegion)
-      });
+    .then(() => {
+        return Atlanta.create(newAtlanta)
+});
+Region.deleteMany()
+    .then(() => {
+        return Region.create(newRegion)
+});
+
+
+
+
