@@ -1,0 +1,21 @@
+{
+  "name": "project-two",
+  "version": "1.0.0",
+  "description": "I could do a mobile coding application that syncs with the computer? ... no... that would be too difficult in a short time.",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/mekaala/project-2.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/mekaala/project-2/issues"
+  },
+  "homepage": "https://github.com/mekaala/project-2#readme",
+  "dependencies": {}
+}
