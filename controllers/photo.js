@@ -13,7 +13,7 @@ photoRouter.get('/', (req, res) => {
 });
 
 photoRouter.get('/atlanta/:atlantaId', (req, res) => {
-  Atlanta.findById(req.params.atlantaId).then(region => {
+  Region.findById(req.params.atlantaId).then(region => {
       res.render('photos/region', { region });
   });
 });
