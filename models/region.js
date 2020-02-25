@@ -5,15 +5,11 @@ const mongoose = require('../db/connection.js')
  * TODO: create model schema 
  *
  */
+
 const RegionSchema = new mongoose.Schema({
-  atlanta: {
-    type: mongoose.Schema.Types.ObjectId,
-    ref: 'Atlanta'
-  },
-  name: {
-    type: String,
-    required: true
-  },
-})
+  region: String,
+  name: String
+}) 
+
 
 module.exports = mongoose.model('Region', RegionSchema);
