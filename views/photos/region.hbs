@@ -5,30 +5,27 @@
 
 	<div class = "region-show-page">
 
-		<h2>You are viewing:
-
-			{{ region }}
-
-		</h2>
-
-        <h3>Areas: </h3>
+        <h2>Areas of {{ name }}</h2>
 
         <ul>
 
-            {{#each region }}
+            {{#each areas }}
 
                 <li>
 
-                        {{ area }}
-			
+                    <a href="/atlanta/area/{{ id }}">
+                        {{ place }}<br/>
                         <img src="{{ img }}"/>
-                    
+                    </a>
+
                 </li>
 
             {{/each }}
 
-        <a href="/{{ id }}/edit">Edit Region</a><br/>
-        <a href="/{{ id }}/newarea">Add New Area</a><br/>
+        </ul>
+
+        <a href="/atlanta/{{ areas.id }}/edit">Edit Region</a><br/>
+        <a href="/atlanta/{{ areas.id }}/new">Add New Area</a><br/>
 
 
 	</div>
