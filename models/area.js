@@ -1,18 +1,26 @@
 const mongoose = require('../db/connection.js')
 
-/* Step 2
- *
- * TODO: create model schema 
- *
- */
-const AreaSchema = new mongoose.Schema({
+const PhotoSchema = new mongoose.Schema({
   name: String,
-  description: String,
-  rules: String,
-  photo: {
+})
+
+const AreaSchema = new mongoose.Schema({
+  region: {
+    type: mongoose.Schema.Types.ObjectId,
+    ref: 'Region'
+  },
+  name: {
     type: String,
     required: true,
-  }
+},
+  description: {
+    type: String,
+    required: true,
+},  
+rules: String,
+img: [PhotoSchema]
 })
+
+
 
 module.exports = mongoose.model('Area', AreaSchema);
