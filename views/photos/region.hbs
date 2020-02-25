@@ -1,5 +1,8 @@
 <main>
 
+    <a href="/atlanta">Return to Home Page</a>
+
+
 	<div class = "region-show-page">
 
 		<h2>You are viewing:
@@ -7,8 +10,6 @@
 			{{ region }}
 
 		</h2>
-
-		<a href="/">Return to Home Page</a>
 
         <h3>Areas: </h3>
 
@@ -20,15 +21,15 @@
 
                         {{ area }}
 			
-                        <img src="{{ photo }}"/>
+                        <img src="{{ img }}"/>
                     
                 </li>
 
             {{/each }}
 
-        <a href="/{{ region }}/edit">Edit Region</a>
+        <a href="/{{ id }}/edit">Edit Region</a><br/>
+        <a href="/{{ id }}/newarea">Add New Area</a><br/>
 
-        <a>Add New Area</a>
 
 	</div>
 

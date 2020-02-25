@@ -1,0 +1,47 @@
+<main>
+
+	<div class = "area-show-page">
+
+		<h2>You are viewing:
+
+			{{ area }}
+
+		</h2>
+
+        <h3>Information: 
+
+            {{ information }}
+
+        </h3>
+
+        <h3>Rules: 
+
+            {{ rules }}
+
+        </h3>
+
+        <ul>
+
+            {{#each photo }}
+
+                <li>
+
+                        {{ pic }}<br/>
+			                    
+                </li>
+
+            {{/each }}
+
+        </ul>
+
+         <a href="/{{ region }}/edit">Edit Area</a><br/>
+         <a href="/{{ region }}/new">Add New Photo</a><br/>
+
+         <a href="/">Return to Home Page</a>
+         <a href="/atlanta/{{ id }}">{{ region }}</a>
+
+
+
+	</div>
+
+</main>
