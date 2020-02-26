@@ -20,7 +20,6 @@ let newRegion = [
 let newArea = [
     {    
         name: 'Midtown',
-        region: '5e56a971e17f16305808b3de',
         place: 'Historic Fourth Ward Park',
         description: 'Across from Ponce City Market lies the gorgeous Historic Fourth Ward Park. Here you can take amazing photos of nature and families.',
         rules: 'Park operates from 6 am to 11 pm every day. Do not feed the ducks and geese! Do not fish either!', 
@@ -28,7 +27,6 @@ let newArea = [
     },
     {
         name: 'Midtown',
-        region: '5e56a971e17f16305808b3de',
         place: 'Piedmont Park',
         description: 'String',
         rules: 'String',
@@ -36,7 +34,6 @@ let newArea = [
     },
     {
         name: 'Brookhaven',
-        region: '5e56a971e17f16305808b3e0',
         place: 'Lenox Park',
         description: 'String',
         rules: 'String',
@@ -44,7 +41,6 @@ let newArea = [
     },
     {
         name: 'Brookhaven',
-        region: '5e56a971e17f16305808b3e0',
         place: 'Brookhaven Park',
         description: 'String',
         rules: 'String',
