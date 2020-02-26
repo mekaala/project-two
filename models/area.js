@@ -7,12 +7,11 @@ const mongoose = require('../db/connection.js')
 // })
 
 const AreaSchema = new mongoose.Schema({
-  region: {type: mongoose.Schema.Types.ObjectId, ref: 'Region'},
+  name: {type: String, required: true},
   place: {type: String, required: true},
   description: {type: String, required: true}, 
   rules: {type: String, required: true}, 
   img: {type: String, required: true}
-  // photo: [PhotoSchema]
 }) 
 
 
