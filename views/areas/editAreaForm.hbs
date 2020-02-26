@@ -6,11 +6,16 @@
 
         <form action="/atlanta/areas/area/{{ area.id }}?_method=PUT" method="POST">
 
-        Description: <input type="text" name="description" value="{{ area.description }}"/><br/>
+            Region: <input type="text" name="name" value="{{ area.name }}" /><br/>
 
-        Rules: <input type="text" name="rules" value="{{ area.rules }}"/><br/>
+            Name: <input type="text" name="place" value="{{ area.place }}" /><br/>
 
-        Photo: <input type="text" name="img" value="{{ area.img }}"/><br/>
+            Description: <input type="text" name="description" value="{{ area.description }}" /><br/>
+
+            Rules: <input type="text" name="rules" value="{{ area.rules }}" /><br/>
+
+            Photo: <input type="text" name="img" value="{{ area.img }}" /><br/>
+
 
         <input type="submit" value="Submit Changes"/>
 
