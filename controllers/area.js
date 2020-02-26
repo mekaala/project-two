@@ -2,9 +2,15 @@ const express = require('express')
 const Area = require('../models/Area.js')
 const areaRouter = express.Router()
 
-// ==============
-// INDEX OF AREAS
-// ==============
+areaRouter.get('/index', (req, res) => {
+  Area.find().then(places => {
+    res.render('areas/index', { places });
+  })
+});
+
+// =============================
+// INDEX OF AREAS BY REGION NAME
+// =============================
 
 areaRouter.get('/:name', (req, res) => {
   Area.find({name: req.params.name}).then(areas => {
@@ -12,7 +18,6 @@ areaRouter.get('/:name', (req, res) => {
     res.render('areas/areas', { areas });
   })
 });
-
 
 // ================
 // SHOW SINGLE AREA
@@ -31,9 +36,9 @@ areaRouter.get('/area/:areaId', (req, res) => {
 areaRouter.get('/create/new', (req, res) => {
   res.render('areas/newAreaForm');
 });
-areaRouter.post('/:name', (req, res) => {
+areaRouter.post('/', (req, res) => {
   Area.create(req.body).then(() => {
-      res.redirect('/atlanta/areas/' + req.params.name)
+      res.redirect('/atlanta/areas/index')
   });
 });
 
@@ -48,7 +53,7 @@ areaRouter.get('/area/:areaId/edit', (req, res) => {
 })
 areaRouter.put('/area/:areaId', (req, res) => {
   Area.findByIdAndUpdate(req.params.areaId, req.body).then(area => {
-    res.redirect('/atlanta/areas/area/' + req.params.areaId);
+    res.redirect('/atlanta/areas/area/' + req.params.areaId)
   })
 })
 
@@ -59,7 +64,7 @@ areaRouter.put('/area/:areaId', (req, res) => {
 areaRouter.delete('/area/:areaId', (req, res) => {
   Area.findByIdAndRemove(req.params.areaId).then(() => {
     Area.find({name: req.params.name}).then(() => {
-      res.redirect('/atlanta/areas/:name');
+      res.redirect('/atlanta/areas/index');
     });
   });
 });
