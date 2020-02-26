@@ -8,7 +8,9 @@ const mongoose = require('../db/connection.js')
 
 const RegionSchema = new mongoose.Schema({
   name: {type: String, required: true},
-  area: [AreaSchema]
+  about: String,
+  img: String
+  // area: [AreaSchema]
 }) 
 
 
