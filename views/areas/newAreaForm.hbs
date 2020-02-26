@@ -1,10 +1,12 @@
 <main>
 
     <a href="/atlanta">Return to Home Page</a>
+    <a href="/atlanta/areas/{{ areas.name }}">Return to {{ areas.name }}</a>
+
 
     <h1>Create New Area</h1>
 
-    <form method="POST" action="/atlanta">
+    <form method="POST" action="/atlanta/areas/{{ areas.name }}">
 
         Area: <input type="text"  name="place" /><br/>
 
@@ -15,6 +17,9 @@
         Photo: <input type="text" name="img" /><br/>
 
         <input type="submit" value="Create Area"/>
+
+{{!-- <input type="hidden" name="region" value="{{ reg }}" --}}
+
 
     </form>
     

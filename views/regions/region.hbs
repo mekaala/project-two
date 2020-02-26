@@ -1,0 +1,21 @@
+<main>
+
+    <a href="/atlanta">Return to Home Page</a>
+
+
+	<div class = "region-show-page">
+
+        <h2>{{ region.name }}</h2>
+
+        <p>{{ region.about }}</p>
+
+        <a href = "/atlanta/areas/{{ region.name }}">Areas of {{ region.name }}</a><br/>
+
+        <a href="/atlanta/areas/create/new">Add New Area</a><br/>
+
+        <a href="/atlanta/{{region.id}}/edit">Edit Region</a><br/>
+
+
+	</div>
+
+</main>
