@@ -7,13 +7,15 @@
 
         <h2>{{ region.name }}</h2>
 
-        <p>{{ region.about }}</p>
+        <p>{{ region.about }}</p><br/>
+
+        <img src="{{ region.img }}" />
 
         <a href = "/atlanta/areas/{{ region.name }}">Areas of {{ region.name }}</a><br/>
 
         <a href="/atlanta/areas/create/new">Add New Area</a><br/>
 
-        <a href="/atlanta/{{region.id}}/edit">Edit Region</a><br/>
+        {{!-- <a href="/atlanta/{{region.id}}/edit">Edit Region</a><br/> --}}
 
 
 	</div>
