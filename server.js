@@ -2,9 +2,9 @@ const express = require('express')
 const app = express()
 const methodOverride = require('method-override')
 
-const photoRouter = require('./controllers/photo.js')
-// const regionRouter = require('./controllers/region.js')
-// const areaRouter = require('./controllers/area.js')
+const areaRouter = require('./controllers/area.js')
+const regionRouter = require('./controllers/region.js')
+// const photoRouter = require('./controllers/photo.js')
 
 
 
@@ -19,7 +19,9 @@ app.use(express.static(__dirname+"/public"))
 app.set('view engine', 'hbs')
 
 
-app.use('/atlanta', photoRouter)
+app.use('/atlanta', regionRouter)
+app.use('/atlanta/areas', areaRouter)
+// app.use('/atlanta/photos', photoRouter)
 
 // app.use('/area', areaRouter)
 // app.use('/region', regionRouter)
