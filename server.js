@@ -23,9 +23,6 @@ app.use('/atlanta', regionRouter)
 app.use('/atlanta/areas', areaRouter)
 // app.use('/atlanta/photos', photoRouter)
 
-// app.use('/area', areaRouter)
-// app.use('/region', regionRouter)
-
 const PORT = process.env.PORT || 3000 
 
 app.listen(PORT, () => {
