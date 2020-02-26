@@ -1,0 +1,23 @@
+<main>
+    <a href="/atlanta">Return to Home Page</a>
+
+    <h1>Atlanta Park List</h1>
+
+    <h2>Welcome!<br/>
+    Don't want to sort by region? No problem!<br/>
+    Please select the park of your choice.</h2>
+    
+    <ul>
+
+        {{#each places }}
+
+                    <a href="/atlanta/areas/area/{{ id }}">{{ place }}<br/>
+                    <img src="{{ img }}"/><br/>
+                    </a>
+        {{/each }}
+
+    </ul>
+
+    <a href="/atlanta/areas/create/new">Add New Area</a><br/>
+
+</main>
