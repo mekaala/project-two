@@ -5,7 +5,7 @@
 
 	<div class = "region-show-page">
 
-        <h2>Areas of {{ name }}</h2>
+        <h2>Areas of {{ areas.name }} </h2>
 
         <ul>
 
@@ -13,7 +13,7 @@
 
                 <li>
 
-                    <a href="/atlanta/area/{{ id }}">
+                    <a href="/atlanta/areas/area/{{ id }}">
                         {{ place }}<br/>
                         <img src="{{ img }}"/>
                     </a>
@@ -24,8 +24,7 @@
 
         </ul>
 
-        <a href="/atlanta/{{ areas.id }}/edit">Edit Region</a><br/>
-        <a href="/atlanta/{{ areas.id }}/new">Add New Area</a><br/>
+        <a href="/atlanta/areas/create/new">Add New Area</a><br/>
 
 
 	</div>

@@ -2,23 +2,23 @@
 
 	<div class = "area-show-page">
 
-		<h2>You are viewing:
+		<h2>
 
 			{{ area.place }}
 
 		</h2>
 
-        <h3>Information: 
+        <h3> 
 
             {{ area.description }}
 
         </h3>
 
-        <h3>Rules: 
+        <p>
 
             {{ area.rules }}
 
-        </h3>
+        </p>
 
         <img src="{{ area.img }}"/>
 
@@ -36,11 +36,16 @@
 
         </ul>
 
-         <a href="/{{ region }}/edit">Edit Area</a><br/>
+         <a href="/atlanta/areas/area/{{ area.id }}/edit">Edit Area</a><br/>
+         
          <a href="/{{ region }}/new">Add New Photo</a><br/>
 
          <a href="/atlanta">Return to Home Page</a><br/>
-         <a href="/atlanta/{{ area.region }}">Return to {{ area.region }}</a>
+         <a href="/atlanta/areas/{{ area.name }}">Return to {{ area.name }}</a>
+
+        <form action="/atlanta/areas/area/{{ area.id }}?_method=DELETE" method="POST">
+			<input type="submit" value="Delete Area"/>
+		</form>
 
 
 

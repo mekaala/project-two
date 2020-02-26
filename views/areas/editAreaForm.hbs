@@ -1,0 +1,19 @@
+<main>
+
+    <a href="/atlanta">Return to Home Page</a>
+
+    <h1>Edit Area</h1>
+
+        <form action="/atlanta/areas/area/{{ area.id }}?_method=PUT" method="POST">
+
+        Description: <input type="text" name="description" value="{{ area.description }}"/><br/>
+
+        Rules: <input type="text" name="rules" value="{{ area.rules }}"/><br/>
+
+        Photo: <input type="text" name="img" value="{{ area.img }}"/><br/>
+
+        <input type="submit" value="Edit Area"/>
+
+    </form>
+    
+</main>
