@@ -1,10 +1,10 @@
 <main>
 
-    <a href="/atlanta">Return to Home Page</a>
+    <a href="/">Return to Home Page</a>
 
     <h1>Add New Region</h1>
 
-    <form method="POST" action="/atlanta/{{ region.id }}?_method=PUT">
+    <form method="POST" action="/{{ region.id }}?_method=PUT">
 
         Name: <input type="text" name="name" value="{{ region.name }}"/><br/>
 
