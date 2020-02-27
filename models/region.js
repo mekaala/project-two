@@ -10,7 +10,6 @@ const RegionSchema = new mongoose.Schema({
   name: {type: String, required: true},
   about: String,
   img: String
-  // area: [AreaSchema]
 }) 
 
 
