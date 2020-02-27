@@ -12,6 +12,16 @@ regionRouter.get('/', (req, res) => {
   });
 });
 
+// ===========
+// SHOW REGION
+// ===========
+
+regionRouter.get('/:regionId', (req, res) => {
+  Region.findById(req.params.regionId).then(region => {
+    res.render('regions/region', { region })
+  })
+})
+
 // =================
 // CREATE NEW REGION
 // =================
@@ -25,14 +35,32 @@ regionRouter.post('/', (req, res) => {
   });
 });
 
-// ==================
-// SHOW SINGLE REGION
-// ==================
+// ===========
+// EDIT REGION
+// ===========
 
-regionRouter.get('/:regionId', (req, res) => {
+regionRouter.get('/:regionId/edit', (req, res) => {
   Region.findById(req.params.regionId).then(region => {
-    res.render('regions/region', { region })
+    res.render('regions/editRegionForm', { region })
   })
 })
+regionRouter.put('/:regionId', (req, res) => {
+  Region.findByIdAndUpdate(req.params.regionId, req.body).then(region => {
+    res.redirect('/atlanta/' + req.params.regionId)
+  })
+})
+
+// =============
+// DELETE REGION
+// =============
+
+regionRouter.delete('/:regionId', (req, res) => {
+  Region.findByIdAndRemove(req.params.regionId).then(() => {
+    Region.find({name: req.params.name}).then(() => {
+      res.redirect('/atlanta');
+    });
+  });
+});
+
 
 module.exports = regionRouter;

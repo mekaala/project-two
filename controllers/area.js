@@ -47,7 +47,9 @@ areaRouter.post('/', (req, res) => {
 // =========
 
 areaRouter.get('/area/:areaId/edit', (req, res) => {
-  Area.findById(req.params.areaId).then(area => {
+  Area.findById(req.params.areaId)
+  // Photo.findById(req.params.photoId)
+  .then(area => {
     res.render('areas/editAreaForm', { area })
   })
 })
