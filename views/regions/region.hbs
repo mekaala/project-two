@@ -9,13 +9,17 @@
 
         <p>{{ region.about }}</p><br/>
 
-        <img src="{{ region.img }}" />
+        <img src="{{ region.img }}" /><br/>
 
         <a href = "/atlanta/areas/{{ region.name }}">Areas of {{ region.name }}</a><br/>
 
         <a href="/atlanta/areas/create/new">Add New Area</a><br/>
 
-        {{!-- <a href="/atlanta/{{region.id}}/edit">Edit Region</a><br/> --}}
+        <a href="/atlanta/{{region.id}}/edit">Edit Region</a><br/>
+
+        <form action="/atlanta/{{ region.id }}?_method=DELETE" method="POST">
+			<input type="submit" value="Delete Region"/>
+		</form>
 
 
 	</div>

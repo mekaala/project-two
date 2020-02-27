@@ -1,0 +1,19 @@
+<main>
+
+    <a href="/atlanta">Return to Home Page</a>
+
+    <h1>Add New Region</h1>
+
+    <form method="POST" action="/atlanta/{{ region.id }}?_method=PUT">
+
+        Name: <input type="text" name="name" value="{{ region.name }}"/><br/>
+
+        About: <input type="text" name="about" value="{{ region.about }}"/><br/>
+        
+        Image: <input type="text" name="img" value="{{ region.img }}"/><br/>
+
+        <input type="submit" value="Submit Changes"/>
+
+    </form>
+    
+</main>
