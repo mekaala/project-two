@@ -1,5 +1,5 @@
 const express = require('express')
-const Area = require('../models/Area.js')
+const Area = require('../models/Area')
 const areaRouter = express.Router()
 
 areaRouter.get('/index', (req, res) => {

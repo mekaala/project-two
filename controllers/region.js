@@ -1,5 +1,5 @@
 const express = require('express')
-const Region = require('../models/Region.js');
+const Region = require('../models/Region')
 const regionRouter = express.Router()
 
 // ================

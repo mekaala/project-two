@@ -2,8 +2,8 @@ const express = require('express')
 const app = express()
 const methodOverride = require('method-override')
 
-const areaRouter = require('./controllers/area.js')
-const regionRouter = require('./controllers/region.js')
+const areaRouter = require('./controllers/area')
+const regionRouter = require('./controllers/region')
 // const photoRouter = require('./controllers/photo.js')
 
 
