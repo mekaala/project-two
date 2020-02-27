@@ -1,5 +1,6 @@
 const express = require('express')
 const Area = require('../models/Area')
+const Photo =require('../models/Photo')
 const areaRouter = express.Router()
 
 areaRouter.get('/index', (req, res) => {
@@ -24,7 +25,7 @@ areaRouter.get('/:name', (req, res) => {
 // ================
 
 areaRouter.get('/area/:areaId', (req, res) => {
-  Area.findById(req.params.areaId).then(area => {
+  Area.findById(req.params.areaId).populate('photos').then(area => {
     res.render('areas/area', { area })
   })
 })
@@ -45,25 +46,6 @@ areaRouter.post('/', (req, res) => {
 // =========
 // EDIT AREA
 // =========
-
-// areaRouter.get('/area/:areaId/edit', (req, res) => {
-//   let area = null;
-//   Area.findById(req.params.areaId).then(foundArea => {
-//       area = foundArea;
-//       return Region.find();
-//   }).then(regions => {
-//       res.render('areas/editAreaForm', { area, regions });
-//   }).catch(e => {
-//       // If we get an error in any of the "then" callbacks,
-//       // this code will run.
-//       console.log(e);
-//   })
-// })
-// areaRouter.put('/area/:areaId', (req, res) => {
-//   Area.findByIdAndUpdate(req.params.areaId, req.body).then(area => {
-//     res.redirect('/atlanta/areas/area/' + req.params.areaId)
-//   })
-// })
 
 areaRouter.get('/area/:areaId/edit', (req, res) => {
   Area.findById(req.params.areaId)
@@ -89,5 +71,15 @@ areaRouter.delete('/area/:areaId', (req, res) => {
     });
   });
 });
+
+// =============
+// ADD NEW PHOTO
+// =============
+areaRouter.get('/area/photo/new', (req, res) => {
+  res.render('photos/newPhotoForm')
+});
+
+
+
 
 module.exports = areaRouter;
