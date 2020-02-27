@@ -2,24 +2,27 @@
 
 	<div class = "region-show-page">
 
-        <h2>{{ region.name }}</h2>
+        <h1><a href = "/areas/{{ region.name }}">{{ region.name }}</a></h1>
 
-        <p>{{ region.about }}</p><br/>
+        <p>{{ region.about }}</p>
 
-        <img src="{{ region.img }}" /><br/>
+        <img src="{{ region.img }}"/>
 
-        <p class="cite">{{ region.imgSource }}</p>
+        <p class="cite">{{ region.imgSource }}</p><br/>
 
-        <a href = "/areas/{{ region.name }}">Areas of {{ region.name }}</a><br/>
+        <div class="region-footer">
 
-        <a href="/areas/create/new">Add New Area</a><br/>
+            <a href = "/areas/{{ region.name }}">Areas of {{ region.name }}</a>
 
-        <a href="/{{region.id}}/edit">Edit Region</a><br/>
+            <a href="/areas/create/new">Add New Area</a>
 
-        <form action="/{{ region.id }}?_method=DELETE" method="POST">
-			<button type="submit">Delete Region</button>
-		</form>
+            <a href="/{{region.id}}/edit">Edit Region</a>
 
+            <form class="delete" action="/{{ region.id }}?_method=DELETE" method="POST">
+                <button type="submit">Delete Region</button>
+            </form>
+
+        </div>
 
 	</div>
 
