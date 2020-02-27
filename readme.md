@@ -27,5 +27,5 @@ Region - new areas
 Area - new photos
 
 
-<a href="https://mekaala-atl-photos.herokuapp.com/">Heroku Application</a>
+<a href="https://mekaala-atl-photos.herokuapp.com/">Heroku Application</a><br/>
 <a href="https://trello.com/b/MXrS9Chd/project-two">Trello Board</a>
