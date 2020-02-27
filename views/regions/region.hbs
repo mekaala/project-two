@@ -1,7 +1,5 @@
 <main>
 
-    <a href="/">Return to Home Page</a><br/>
-
     <a href='/areas/index'>View Entire Area Index</a><br/>
 
 	<div class = "region-show-page">
@@ -11,6 +9,8 @@
         <p>{{ region.about }}</p><br/>
 
         <img src="{{ region.img }}" /><br/>
+
+        <p class="cite">{{ region.imgSource }}</p>
 
         <a href = "/areas/{{ region.name }}">Areas of {{ region.name }}</a><br/>
 

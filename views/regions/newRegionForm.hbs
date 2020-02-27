@@ -1,23 +1,28 @@
 <main>
 
-    <a href="/">Return to Home Page</a><br/>
-
     <a href='/{{ region.id }}'>Return to Region Information</a><br/>
 
-    <a href='/areas/index'>View Entire Area Index</a><br/>
+    <h2><a href='/areas/index'>View Entire Area Index</a></h2><br/>
 
-    <h1>Add New Region</h1>
+    <div class="region-create-page">
 
-    <form method="POST" action="/">
+        <h1>Add New Region</h1>
 
-        Name: <input type="text"  name="name" /><br/>
+        <form method="POST" action="/">
 
-        About: <input type="text" name="about" /><br/>
-        
-        Image: <input type="text" name="img" /><br/>
+                <label>Region:</label><input type="text" name="name"/><br/>
 
-        <input type="submit" value="Add Region"/>
+                <label>About:</label><textarea type="text" name="about"></textarea><br/>
 
-    </form>
+                <label>Photo:</label><input type="text" name="img"/><br/>
+
+                <label>Source:</label><input type="text" name="imgSource"/><br/>
+
+
+            <input type="submit" value="Add Region"/>
+
+        </form>
+
+    </div>
     
 </main>

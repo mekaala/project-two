@@ -1,23 +1,31 @@
 <main>
-
-    <h1>Atlanta Park Database</h1>
-
-    <h2>Welcome!<br/>
-    You can find information and photos of different parks all over Atlanta.<br/>
-    Please select your region.</h2>
     
-    <ul>
+    <div class="regions-display-page">
 
-        {{#each regions }}
 
-             <li><a href="/{{ id }}">{{ name }}</a></li>
+        <h2>Atlanta Region List</h2>
+        <h3>Welcome!<br/>
+        You can find information and photos of different parks all over Atlanta.<br/>
+        Please select your region.</h3>
+        
+        <ul>
 
-        {{/each }}
+            {{#each regions }}
 
-    </ul>
+                <li><a href="/{{ id }}">{{ name }}</a></li>
 
-    <a href="/areas/index">View Entire Area List</a><br/>
+            {{/each }}
 
-    <a href="/new">Add New Region</a>
+        </ul>
+
+        <div class="regions-footer">
+
+            <a href="/areas/index">View Entire Area List</a>
+
+            <a href="/new">Add New Region</a>
+
+        </div>
+
+    </div>
 
 </main>
