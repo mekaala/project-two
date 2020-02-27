@@ -19,8 +19,8 @@ app.use(express.static(__dirname+"/public"))
 app.set('view engine', 'hbs')
 
 
-app.use('/atlanta', regionRouter)
-app.use('/atlanta/areas', areaRouter)
+app.use('/', regionRouter)
+app.use('/areas', areaRouter)
 // app.use('/atlanta/photos', photoRouter)
 
 const PORT = process.env.PORT || 3000 
