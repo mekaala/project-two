@@ -1,26 +1,27 @@
 <main>
-    <div>
+
+    <div class="area-index-page">
         
+        <h2>Atlanta Park List</h2>
+
+        <h3>Welcome!<br/>
+        Don't want to sort by region? No problem!<br/>
+        Please select the park of your choice.</h3>
+        
+        <ul>
+
+            {{#each places }}
+
+                        <a href="/areas/area/{{ id }}">{{ place }}<br/>
+                        <img src="{{ img }}"/></a><br/>
+                        <p class="cite">{{ imgSource }}</p>
+                        
+            {{/each }}
+
+        </ul>
+
+        <a href="/areas/create/new">Add New Area</a><br/>
+
     </div>
-    <a href="/">Return to Home Page</a><br/>
-
-    <h1>Atlanta Park List</h1>
-
-    <h2>Welcome!<br/>
-    Don't want to sort by region? No problem!<br/>
-    Please select the park of your choice.</h2>
-    
-    <ul>
-
-        {{#each places }}
-
-                    <a href="/areas/area/{{ id }}">{{ place }}<br/>
-                    <img src="{{ img }}"/><br/>
-                    </a>
-        {{/each }}
-
-    </ul>
-
-    <a href="/areas/create/new">Add New Area</a><br/>
 
 </main>

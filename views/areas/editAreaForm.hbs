@@ -1,33 +1,37 @@
 <main>
 
-    <a href="/">Return to Home Page</a><br/>
-
     <a href='/areas/index'>View Entire Area Index</a><br/>
 
+    <div class="area-edit-page">
 
-    <h1>Edit Area</h1>
+        <h1>Edit Area</h1>
 
-        <form action="/areas/area/{{ area.id }}?_method=PUT" method="POST">
+            <form action="/areas/area/{{ area.id }}?_method=PUT" method="POST">
 
-            {{!-- Region Name: <select name="region">
-				<option value="">Select a Region</option>
-				{{#each regions }}
-					<option value="{{ id }}">{{ name }}</option>
-				{{/each}}
-			</select><br/> --}}
+                {{!-- Region Name: <select name="region">
+                    <option value="">Select a Region</option>
+                    {{#each regions }}
+                        <option value="{{ id }}">{{ name }}</option>
+                    {{/each}}
+                </select><br/> --}}
 
-            Region: <input type="text" name="name" value="{{ area.name }}"/><br/>
+                <label>Region:</label><input type="text" name="name" value="{{ area.name }}"/><br/>
 
-            Name: <input type="text" name="place" value="{{ area.place }}" /><br/>
+                <label>Name:</label><input type="text" name="place" value="{{ area.place }}" /><br/>
 
-            Description: <input type="text" name="description" value="{{ area.description }}" /><br/>
+                <label>Description:</label><textarea type="text" name="description" value="{{ area.description }}">{{ area.description }}</textarea><br/>
 
-            Rules: <input type="text" name="rules" value="{{ area.rules }}" /><br/>
+                <label>Rules:</label><textarea type="text" name="rules" value="{{ area.rules }}">{{ area.rules }}</textarea><br/>
 
-            Photo: <input type="text" name="img" value="{{ area.img }}" /><br/>
+                <label>Photo:</label><input type="text" name="img" value="{{ area.img }}"/><br/>
 
-        <input type="submit" value="Submit Changes"/>
+                <label>Source:</label><input type="text" name="imgSource" value="{{ area.imgSource }}"/><br/>
 
-    </form>
+
+            <input class="send" type="submit" value="Submit Changes"/>
+
+        </form>
+
+    </div>
     
 </main>
