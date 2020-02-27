@@ -17,5 +17,10 @@
     "url": "https://github.com/mekaala/project-2/issues"
   },
   "homepage": "https://github.com/mekaala/project-2#readme",
-  "dependencies": {}
+  "dependencies": {
+    "express": "^4.17.1",
+    "hbs": "^4.1.0",
+    "method-override": "^3.0.0",
+    "mongoose": "^5.9.2"
+  }
 }
