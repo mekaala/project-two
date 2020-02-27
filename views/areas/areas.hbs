@@ -2,19 +2,13 @@
 
     <div class = "areas-show-page">
 
-        <h1>
-
-            Areas of Region
-
-        </h1>
-
         <ul>
 
             {{#each areas }}
 
                 <li>
 
-                    <a href="/areas/area/{{ id }}">{{ place }}</a><br/>
+                    <h1><a href="/areas/area/{{ id }}">{{ place }}</a></h1><br/>
                     <a href="/areas/area/{{ id }}"><img src="{{ img }}"/></a><br/>
                     <p class="cite">{{ imgSource }}</p>
 
@@ -24,7 +18,11 @@
 
         </ul>
 
-        <a href="/areas/create/new">Add New Area</a><br/>
+        <div class="region-footer">
+
+            <a href="/areas/create/new">Add New Area</a><br/>
+
+        </div>
 
 	</div>
 

@@ -47,13 +47,17 @@
 
         </ul>
 
-         <a href="/areas/area/{{ area.id }}/edit">Edit Area</a><br/>
-         
-         <a href="/{{ region }}/new">Add New Photo</a><br/>
+        <div class="region-footer">
 
-        <form action="/areas/area/{{ area.id }}?_method=DELETE" method="POST">
-			<button type="submit">Delete Area</button>
-		</form>
+            <a href="/areas/area/{{ area.id }}/edit">Edit Area</a><br/>
+            
+            <a href="/areas/area/photo/new">Add New Photo</a><br/>
+
+            <form class="delete" action="/areas/area/{{ area.id }}?_method=DELETE" method="POST">
+                <button type="submit">Delete Area</button>
+            </form>
+
+        </div>
 
 	</div>
 

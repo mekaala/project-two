@@ -6,13 +6,6 @@
 
         <form method="POST" action="/areas/{{ area.name }}">
 
-                {{!-- Region Name: <select name="region">
-                    <option value="">Select a Region</option>
-                    {{#each regions }}
-                        <option value="{{ id }}">{{ name }}</option>
-                    {{/each}}
-                </select><br/> --}}
-
                 <label>Region:</label><input type="text" name="name"/><br/>
 
                 <label>Name:</label><input type="text" name="place"/><br/>
@@ -25,7 +18,7 @@
 
                 <label>Source:</label><input type="text" name="imgSource"/><br/>
 
-            <button type="submit">Create Area</button>
+            <button class="form" type="submit">Create Area</button>
 
             {{!-- <input type="hidden" name="region" value="{{ reg }}" --}}
 

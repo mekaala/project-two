@@ -12,15 +12,20 @@
 
             {{#each places }}
 
-                        <a href="/areas/area/{{ id }}">{{ place }}<br/>
-                        <img src="{{ img }}"/></a><br/>
-                        <p class="cite">{{ imgSource }}</p>
+                    <h1><a href="/areas/area/{{ id }}">{{ place }}</a></h1><br/>
+                    <a href="/areas/area/{{ id }}"><img src="{{ img }}"/></a><br/>
+                    <p class="cite">{{ imgSource }}</p>
                         
             {{/each }}
 
         </ul>
 
-        <a href="/areas/create/new">Add New Area</a><br/>
+        <div class="region-footer">
+
+            <a href="/areas/create/new">Add New Area</a><br/>
+            
+        </div>
+
 
     </div>
 
