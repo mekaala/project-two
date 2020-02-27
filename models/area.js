@@ -4,8 +4,8 @@ const PhotoSchema = new mongoose.Schema({
   photoImg: String
 }) 
 
-module.exports = mongoose.model('Photo', PhotoSchema);
 const AreaSchema = new mongoose.Schema({
+  // region: {type: mongoose.Schema.Types.ObjectId, ref: 'Region'},
   name: {type: String, required: true},
   place: {type: String, required: true},
   description: {type: String, required: true}, 
