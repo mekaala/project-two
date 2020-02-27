@@ -1,16 +1,20 @@
 body {
-    background: linear-gradient(-45deg, linen, #23a6d5);
+    background-image: url('/Photographs/homepage.jpg');
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: cover;
+    /* background: linear-gradient(-45deg, linen, #23a6d5);
 	background-size: 400% 400%;
-    animation: gradient 15s ease infinite;
+    animation: gradient 15s ease infinite; */
     font-family: 'Montserrat';
     color: black;
 }
 
-@keyframes gradient {
+/* @keyframes gradient {
 	0% {background-position: 0% 50%;}
 	50% {background-position: 100% 50%;}
 	100% {background-position: 0% 50%;}
-}
+} */
 
 div {
     margin: 20px auto;
