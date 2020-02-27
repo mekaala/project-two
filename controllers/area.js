@@ -38,7 +38,7 @@ areaRouter.get('/create/new', (req, res) => {
 });
 areaRouter.post('/', (req, res) => {
   Area.create(req.body).then(() => {
-      res.redirect('/atlanta/areas/index')
+      res.redirect('/areas/index')
   });
 });
 
@@ -74,7 +74,7 @@ areaRouter.get('/area/:areaId/edit', (req, res) => {
 })
 areaRouter.put('/area/:areaId', (req, res) => {
   Area.findByIdAndUpdate(req.params.areaId, req.body).then(area => {
-    res.redirect('/atlanta/areas/area/' + req.params.areaId)
+    res.redirect('/areas/area/' + req.params.areaId)
   })
 })
 
@@ -85,7 +85,7 @@ areaRouter.put('/area/:areaId', (req, res) => {
 areaRouter.delete('/area/:areaId', (req, res) => {
   Area.findByIdAndRemove(req.params.areaId).then(() => {
     Area.find({name: req.params.name}).then(() => {
-      res.redirect('/atlanta/areas/index');
+      res.redirect('/areas/index');
     });
   });
 });

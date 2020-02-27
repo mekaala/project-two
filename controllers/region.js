@@ -12,6 +12,8 @@ regionRouter.get('/', (req, res) => {
   });
 });
 
+
+
 // =================
 // CREATE NEW REGION
 // =================
@@ -21,7 +23,7 @@ regionRouter.get('/new', (req, res) => {
 });
 regionRouter.post('/', (req, res) => {
   Region.create(req.body).then(() => {
-    res.redirect('/atlanta');
+    res.redirect('/');
   });
 });
 
@@ -36,7 +38,7 @@ regionRouter.get('/:regionId/edit', (req, res) => {
 })
 regionRouter.put('/:regionId', (req, res) => {
   Region.findByIdAndUpdate(req.params.regionId, req.body).then(region => {
-    res.redirect('/atlanta/' + req.params.regionId)
+    res.redirect('/' + req.params.regionId)
   })
 })
 
@@ -47,7 +49,7 @@ regionRouter.put('/:regionId', (req, res) => {
 regionRouter.delete('/:regionId', (req, res) => {
   Region.findByIdAndRemove(req.params.regionId).then(() => {
     Region.find({name: req.params.name}).then(() => {
-      res.redirect('/atlanta');
+      res.redirect('/');
     });
   });
 });
