@@ -8,7 +8,8 @@ let Area = require('../models/Area.js');
 let newRegion = [
     {
         name: 'Midtown',
-        about: 'Located in middle Atlanta, Midtown is known for its bustling urban scene.'
+        about: 'Located in middle Atlanta, Midtown is known for its bustling urban scene.',
+        img: 'https://cdngeneral.rentcafe.com/dmslivecafe/3/422030/TS-Atlanta-night-resized.jpg?crop=(0,3.1249999999994884,300,200)&cropxunits=300&cropyunits=200&quality=85&scale=both&',
     },
     { name: 'Downtown' },
     { name: 'Brookhaven' },
