@@ -1,7 +1,8 @@
 const mongoose = require('../db/connection.js')
 
 const PhotoSchema = new mongoose.Schema({
-  photoImg: String
+  photoImg: {type: String, required: true},
+  photoSource: {type: String, required: true}
 }) 
 
 const AreaSchema = new mongoose.Schema({
@@ -11,6 +12,7 @@ const AreaSchema = new mongoose.Schema({
   description: {type: String, required: true}, 
   rules: {type: String, required: true}, 
   img: {type: String, required: true},
+  imgSource: {type: String, required: true},
   photos: [PhotoSchema]
 }) 
 
