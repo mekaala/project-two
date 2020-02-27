@@ -4,7 +4,14 @@
 
     <h1>Create New Area</h1>
 
-    <form method="POST" action="/atlanta/areas">
+    <form method="POST" action="/atlanta/areas/{{ area.name }}">
+
+            {{!-- Region Name: <select name="region">
+				<option value="">Select a Region</option>
+				{{#each regions }}
+					<option value="{{ id }}">{{ name }}</option>
+				{{/each}}
+			</select><br/> --}}
 
             Region: <input type="text" name="name" /><br/>
 
