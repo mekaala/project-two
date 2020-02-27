@@ -12,16 +12,6 @@ regionRouter.get('/', (req, res) => {
   });
 });
 
-// ===========
-// SHOW REGION
-// ===========
-
-regionRouter.get('/:regionId', (req, res) => {
-  Region.findById(req.params.regionId).then(region => {
-    res.render('regions/region', { region })
-  })
-})
-
 // =================
 // CREATE NEW REGION
 // =================
@@ -62,5 +52,14 @@ regionRouter.delete('/:regionId', (req, res) => {
   });
 });
 
+// ===========
+// SHOW REGION
+// ===========
+
+regionRouter.get('/:regionId', (req, res) => {
+  Region.findById(req.params.regionId).then(region => {
+    res.render('regions/region', { region })
+  })
+})
 
 module.exports = regionRouter;

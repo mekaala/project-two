@@ -1,5 +1,6 @@
 const express = require('express')
 const Area = require('../models/Area.js')
+const Region = require('../models/Region.js')
 const areaRouter = express.Router()
 
 areaRouter.get('/index', (req, res) => {
@@ -46,6 +47,25 @@ areaRouter.post('/', (req, res) => {
 // EDIT AREA
 // =========
 
+// areaRouter.get('/area/:areaId/edit', (req, res) => {
+//   let area = null;
+//   Area.findById(req.params.areaId).then(foundArea => {
+//       area = foundArea;
+//       return Region.find();
+//   }).then(regions => {
+//       res.render('areas/editAreaForm', { area, regions });
+//   }).catch(e => {
+//       // If we get an error in any of the "then" callbacks,
+//       // this code will run.
+//       console.log(e);
+//   })
+// })
+// areaRouter.put('/area/:areaId', (req, res) => {
+//   Area.findByIdAndUpdate(req.params.areaId, req.body).then(area => {
+//     res.redirect('/atlanta/areas/area/' + req.params.areaId)
+//   })
+// })
+
 areaRouter.get('/area/:areaId/edit', (req, res) => {
   Area.findById(req.params.areaId)
   // Photo.findById(req.params.photoId)
@@ -71,33 +91,4 @@ areaRouter.delete('/area/:areaId', (req, res) => {
   });
 });
 
-
-
-
-// areaRouter.post('/', (req, res) => {
-//   const regionName = req.params.name;
-//   console.log(req.body);
-//   const newArea = new Area(req.body)
-//   console.log(newArea)
-//   Area.findById(req.params.areaId)
-//   .then(())
-//   Area.create(req.body).then(() => {
-//       res.redirect('/atlanta/areas');
-//   });
-// });
-
-
-// photoRouter.get('/:atlantaId', (req, res) => {
-//   Atlanta.findById(req.params.atlantaId).populate('area').then(area => {
-//     res.send(area)
-//       // res.render('photos/area', { area });
-//   });
-// });
-
-
-// photoRouter.get('/:atlantaId', (req, res) => {
-//   Area.find({region: req.params.atlantaId}).then(areas => {
-//     res.render(areas)
-//   }
-// })
 module.exports = areaRouter;
