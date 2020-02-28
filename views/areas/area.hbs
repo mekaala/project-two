@@ -1,9 +1,9 @@
 <main>
 
-    <a href="/areas/{{ area.name }}">Return to {{ area.name }}</a><br/>
-
-
 	<div class = "area-show-page">
+
+        <a href="/areas/{{ area.name }}">Return to {{ area.name }}</a><br/>
+
 
 		<h2>
 
@@ -30,28 +30,26 @@
         </p>
 
         <img src="{{ area.img }}"/>
-
         <p class="cite">{{ area.imgSource }}</p>
 
-        <ul>
-
-            {{#each photo }}
-
-                <li>
-
-                        {{ img }}<br/>
-			                    
-                </li>
-
-            {{/each }}
-
-        </ul>
+        <div class="something">
+            <div class="extra1">
+                <img src="{{ area.imgOne }}"/>
+                <p>{{ area.sourceOne }}</p>
+            </div>
+            <div class="extra2">
+                <img src="{{ area.imgTwo }}"/>
+                <p>{{ area.sourceTwo }}</p>
+            </div>
+            <div class="extra3">
+                <img src="{{ area.imgThree }}"/>
+                <p>{{ area.sourceThree }}</p>
+            </div>
+        </div>
 
         <div class="region-footer">
 
             <a href="/areas/area/{{ area.id }}/edit">Edit Area</a><br/>
-            
-            <a href="/areas/area/photo/new">Add New Photo</a><br/>
 
             <form class="delete" action="/areas/area/{{ area.id }}?_method=DELETE" method="POST">
                 <button type="submit">Delete Area</button>
