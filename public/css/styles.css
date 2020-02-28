@@ -7,6 +7,10 @@ body {
     color: black;
 }
 
+header h4 {
+    display: inline;
+}
+
 a {
     text-decoration: none;
     color: black;
@@ -18,7 +22,7 @@ div {
     padding: 10px;
 }
 
-h1, h2, h3, h4, p, ul, .footer {
+h1, h2, h3, h4, p, ul, .head, .footer {
     margin: 2% auto;
     padding: 0 2%;
 }
@@ -42,14 +46,14 @@ img {
 }
 
 a:hover {
-    color: green;
+    color: blue;
     transition-duration: 0.5s;
 }
 
 .region-footer a {
     display: inline;
     text-align: center;
-    margin-left: 8%;
+    margin-left: 9%;
 }
 
 .delete {
@@ -66,6 +70,10 @@ button:hover {
     background-color: red;
     font-weight: bolder;
     transition-duration: 0.8s;
+}
+
+.extra1 img, .extra2 img, .extra3 img {
+    width: 40%;
 }
 
 .form {
@@ -105,43 +113,52 @@ form {
     margin: 10%;
 }
 
-.region-show-page {
-    background: rgba(128, 128, 128, 0.432);
-}
-
-.region-create-page {
-    background: rgba(128, 128, 128, 0.432);
-}
-
-.region-edit-page {
-    background: rgba(128, 128, 128, 0.432);
-}
-
-.area-index-page {
-    background: rgba(128, 128, 128, 0.432);
-}
-
-.areas-show-page {
+.region-show-page, .region-create-page, .region-edit-page, .area-index-page, .areas-show-page, .area-show-page, .area-create-page, .area-edit-page, .photographers-display-page, .photographer-show-page, .photographer-new-form, .photographer-edit-form {
     background: rgba(128, 128, 128, 0.432);
 }
 
 .area-show-page {
-    background: rgba(128, 128, 128, 0.432);
+    height: 865px;
 }
 
-.area-create-page {
-    background: rgba(128, 128, 128, 0.432);
+.photographers-display-page ul, .something {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-gap: 10px;
+    height: 150px;
+}
+.photographers-display-page h4, .photographers-display-page img {
+    margin: 0;
 }
 
-.area-edit-page {
-    background: rgba(128, 128, 128, 0.432);
+.photographer-show-page {
+    height: 500px;
+}
+.photographer-show-page img {
+    float: right;
+    width: 40%;
+    margin: -10% auto;
+}
+.photographer-show-page p {
+    margin: auto;
+}
+/* .photographer-show-page .region-footer {
+    margin: 4% auto 14%;
+} */
+
+.photographer-show-page .region-footer a {
+    margin: 0 1%;
+    display: inline;
 }
 
-footer {
-    grid-row: 4;
-    grid-column: 1 / span 5;
+.photographer-show-page .delete {
+    margin: -4% 40%;
 }
-    p {
+.photographer-show-page button {
+    width: 100px;
+}
+
+    footer p {
         float: left;
         margin: auto; 
     }
@@ -222,7 +239,38 @@ footer {
     .delete {
         margin: -13% 0 0 68%;
     }
-    .area-show-page form {
-        margin: -18% 0 0 69%;
+    .area-show-page {
+        height: 700px;
+    }
+    .photographers-display-page ul, .something {
+        display: grid;
+        grid-template-columns: repeat(1, 1fr);
+        grid-gap: 10px;
+        height: 280px;    
+    }
+    .area-show-page .region-footer {
+        margin: auto;
+    }
+    .area-show-page a {
+        margin-left: 8%;
+    }
+    .area-show-page button {
+        width: 81px;
+    }
+    .photographer-show-page img {
+        float: none;
+        width: 60%;
+        margin: 3% 20%;
+    }
+    .photographer-show-page .region-footer {
+        display: block;
+    }
+    .photographer-show-page .region-footer a {
+        display: block;
+        margin: auto;
+    }
+    .photographer-show-page .delete {
+        margin: -25px 10px 0;
+        float: right;
     }
 }
