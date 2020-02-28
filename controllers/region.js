@@ -12,8 +12,6 @@ regionRouter.get('/', (req, res) => {
   });
 });
 
-
-
 // =================
 // CREATE NEW REGION
 // =================

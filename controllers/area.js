@@ -1,7 +1,10 @@
 const express = require('express')
 const Area = require('../models/Area')
-const Photo =require('../models/Photo')
 const areaRouter = express.Router()
+
+// ==============
+// INDEX OF AREAS
+// ==============
 
 areaRouter.get('/index', (req, res) => {
   Area.find().then(places => {
@@ -49,7 +52,6 @@ areaRouter.post('/', (req, res) => {
 
 areaRouter.get('/area/:areaId/edit', (req, res) => {
   Area.findById(req.params.areaId)
-  // Photo.findById(req.params.photoId)
   .then(area => {
     res.render('areas/editAreaForm', { area })
   })
@@ -71,15 +73,5 @@ areaRouter.delete('/area/:areaId', (req, res) => {
     });
   });
 });
-
-// =============
-// ADD NEW PHOTO
-// =============
-areaRouter.get('/area/photo/new', (req, res) => {
-  res.render('photos/newPhotoForm')
-});
-
-
-
 
 module.exports = areaRouter;
