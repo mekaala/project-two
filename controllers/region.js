@@ -21,7 +21,7 @@ regionRouter.get('/new', (req, res) => {
 });
 regionRouter.post('/', (req, res) => {
   Region.create(req.body).then(() => {
-    res.redirect('/');
+    res.redirect('/regions');
   });
 });
 
@@ -36,7 +36,7 @@ regionRouter.get('/:regionId/edit', (req, res) => {
 })
 regionRouter.put('/:regionId', (req, res) => {
   Region.findByIdAndUpdate(req.params.regionId, req.body).then(region => {
-    res.redirect('/' + req.params.regionId)
+    res.redirect('/regions/' + req.params.regionId)
   })
 })
 
@@ -47,7 +47,7 @@ regionRouter.put('/:regionId', (req, res) => {
 regionRouter.delete('/:regionId', (req, res) => {
   Region.findByIdAndRemove(req.params.regionId).then(() => {
     Region.find({name: req.params.name}).then(() => {
-      res.redirect('/');
+      res.redirect('/regions');
     });
   });
 });
