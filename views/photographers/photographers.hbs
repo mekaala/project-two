@@ -1,0 +1,31 @@
+<main>
+    
+    <div class="photographers-display-page">
+
+
+        <h2>Atlanta Photographer Directory</h2>
+        <h3>Welcome!<br/>
+        You can find information on photographers living in Atlanta.</h3>
+        
+        <ul>
+
+            {{#each photographers }}
+
+                <li><a href="/photographers/{{ id }}">
+                <h4>{{ name }}</h4><br/>
+                <img src="{{ faceImg }}"/>
+                </a></li>
+
+            {{/each }}
+
+        </ul>
+
+        <div class="footer">
+
+            <a href="/photographers/add/new">Add New Photogapher</a>
+
+        </div>
+
+    </div>
+
+</main>

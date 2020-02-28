@@ -1,0 +1,25 @@
+<main>
+
+    <div class="photographer-edit-form">
+
+        <h1>Edit Photographer Information</h1>
+
+            <form action="/photographers/{{ photographer.id }}?_method=PUT" method="POST">
+
+                <label>Photographer:</label><input type="text" name="name" value="{{ photographer.name }}"/><br/>
+
+                <label>Instagram:</label><input type="text" name="insta" value="{{ photographer.insta }}" /><br/>
+
+                <label>Username:</label><input type="text" name="username" value="{{ photographer.username }}"/><br/>
+
+                <label>Profile Photo:</label><input type="text" name="faceImg" value="{{ photographer.faceImg }}"><br/>
+
+                <label>About:</label><textarea type="text" name="about" value="{{ photographer.about }}">{{ photographer.about }}</textarea><br/>
+
+            <button class="form" type="submit">Submit Changes</button>
+
+        </form>
+
+    </div>
+    
+</main>
