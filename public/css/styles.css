@@ -120,7 +120,12 @@ form {
 .area-show-page {
     height: 865px;
 }
-
+.photographers-display-page {
+    height: 1200px;
+}
+.photographers-display-page .footer {
+    margin: 120% 0;
+}
 .photographers-display-page ul, .something {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
@@ -261,6 +266,15 @@ form {
         float: none;
         width: 60%;
         margin: 3% 20%;
+    }
+    .photographers-display-page {
+        height: 2000px;
+    }
+    .photographers-display-page img {
+        width: 50%;
+    }
+    .photographers-display-page .footer {
+        margin: 1610px auto 0;
     }
     .photographer-show-page .region-footer {
         display: block;
