@@ -4,7 +4,7 @@ const methodOverride = require('method-override')
 
 const areaRouter = require('./controllers/area')
 const regionRouter = require('./controllers/region')
-// const photoRouter = require('./controllers/photo.js')
+const photographerRouter = require('./controllers/photographer')
 
 
 
@@ -21,7 +21,7 @@ app.set('view engine', 'hbs')
 
 app.use('/', regionRouter)
 app.use('/areas', areaRouter)
-// app.use('/atlanta/photos', photoRouter)
+app.use('/photographers', photographerRouter)
 
 const PORT = process.env.PORT || 3000 
 
