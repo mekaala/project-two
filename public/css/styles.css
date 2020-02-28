@@ -75,7 +75,7 @@ button:hover {
 .extra1 img, .extra2 img, .extra3 img {
     width: 100%;
 }
-.extra1, .extra2, .extra3 p {
+.extra1 p, .extra2 p, .extra3 p {
     width: 100%;
     margin: auto 5%;
 }
