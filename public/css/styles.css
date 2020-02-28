@@ -294,7 +294,7 @@ form {
     .area-show-page {
         height: 700px;
     }
-    .photographers-display-page ul, .something {
+    .home-display-page ul, .photographers-display-page ul, .something {
         display: grid;
         grid-template-columns: repeat(1, 1fr);
         grid-gap: 10px;
