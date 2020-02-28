@@ -6,22 +6,21 @@
         <h3>Welcome!<br/>
         You can find information and photos of different parks all over Atlanta.<br/>
         Please select your region.</h3>
-        
+
+        <a href="/regions/new">Add New Region</a>
+
         <ul>
 
             {{#each regions }}
 
-                <li><a href="/{{ id }}">{{ name }}</a></li>
+                <li><a href="/regions/{{ id }}">
+                <h4>{{ name }}</h4><br/>
+                <img src="{{ img }}"/>
+                </a></li>
 
             {{/each }}
 
         </ul>
-
-        <div class="footer">
-
-            <a href="/new">Add New Region</a>
-
-        </div>
 
     </div>
 

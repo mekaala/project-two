@@ -2,11 +2,11 @@
     
     <div class="region-edit-page">
 
-        <h2><a href='/{{ region.id }}'>Return to Region Information</a></h2><br/>
+        <h2><a href='/regions/{{ region.id }}'>Return to Region Information</a></h2><br/>
 
         <h1>Make Changes to Region</h1>
 
-        <form method="POST" action="/{{ region.id }}?_method=PUT">
+        <form method="POST" action="/regions/{{ region.id }}?_method=PUT">
 
             <label>Region:</label><input type="text" name="name" value="{{ region.name }}"/><br/>
 
