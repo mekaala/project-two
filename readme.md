@@ -6,7 +6,6 @@ Each area contains its own name as well as a region name, a description, rules, 
 Instead of an album, I decided to implement a database of photographers that was developed in a separate manner from the regions and areas. I felt that implementing a photographer database into my app would help develop the business of younger photographers who want to market their work. Each photographer page features a name, an instagram/professional portfolio site link, a username, and a profile picture.
 I formatted the styles to give a serene and relaxing appearance, opting for rounded borders to give a welcoming appearance.
 
-<img src="wireframes/Web 1920 - 2.png">
 <img src="wireframes/Web 1920 – 1.png">
 <img src="wireframes/Web 1920 – 3.png">
 <img src="wireframes/Web 1920 – 4.png">
