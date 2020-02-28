@@ -20,7 +20,7 @@ header nav {
     height: 50px;
     top: 0;
 }
-nav a{
+header nav a {
     text-align: center;
     margin: 10%;
     color: rgb(214, 214, 214);
