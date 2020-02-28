@@ -277,6 +277,9 @@ form {
     nav a {
         margin: 6%;
     }
+    .sticky {
+        width: 95.5%
+    }
     img {
         width: 75%;
     }
