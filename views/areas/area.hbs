@@ -4,6 +4,8 @@
 
         <a href="/areas/{{ area.name }}">Return to {{ area.name }}</a><br/>
 
+        <a href="/areas/area/{{ area.id }}/edit">Edit Area</a><br/>
+
 
 		<h2>
 
@@ -48,8 +50,6 @@
         </div>
 
         <div class="region-footer">
-
-            <a href="/areas/area/{{ area.id }}/edit">Edit Area</a><br/>
 
             <form class="delete" action="/areas/area/{{ area.id }}?_method=DELETE" method="POST">
                 <button type="submit">Delete Area</button>
