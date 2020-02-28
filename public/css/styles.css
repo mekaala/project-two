@@ -137,19 +137,16 @@ form {
 }
 
 .photographer-show-page {
-    height: 500px;
+    height: 600px;
 }
 .photographer-show-page img {
     float: right;
     width: 40%;
-    margin: -10% auto;
+    margin: -5% auto;
 }
 .photographer-show-page p {
     margin: auto;
 }
-/* .photographer-show-page .region-footer {
-    margin: 4% auto 14%;
-} */
 
 .photographer-show-page .region-footer a {
     margin: 0 1%;
@@ -157,7 +154,7 @@ form {
 }
 
 .photographer-show-page .delete {
-    margin: -4% 40%;
+    margin: 3px 1%;
 }
 .photographer-show-page button {
     width: 100px;
