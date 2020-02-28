@@ -73,7 +73,10 @@ button:hover {
 }
 
 .extra1 img, .extra2 img, .extra3 img {
-    width: 40%;
+    width: 100%;
+}
+.extra1, .extra2, .extra3 p {
+    text-align: center;
 }
 
 .form {
