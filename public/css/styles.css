@@ -121,7 +121,7 @@ form {
     height: 100%;
 }
 .photographers-display-page {
-    height: 1200px;
+    height: 100%;
 }
 .photographers-display-page .footer {
     margin: 120% 0;
@@ -130,7 +130,7 @@ form {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     grid-gap: 10px;
-    height: 150px;
+    height: 100%;
 }
 .photographers-display-page h4, .photographers-display-page img {
     margin: 0;
