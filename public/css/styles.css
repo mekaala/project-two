@@ -274,7 +274,7 @@ form {
         font-size: small;
         margin: 4% 0;
     }
-    nav a {
+    header nav a {
         margin: 6%;
     }
     .sticky {
@@ -332,5 +332,8 @@ form {
     .photographer-show-page .delete {
         margin: -25px 10px 0;
         float: right;
+    }
+    footer nav a {
+        margin: 0%;
     }
 }
