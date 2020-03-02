@@ -180,7 +180,7 @@ form {
 .photographer-show-page img {
     width: 23%;
     position: absolute;
-    top: 18%;
+    top: 25%;
     left: 62%;
 }
 .photographer-show-page p {
@@ -309,9 +309,8 @@ form {
         width: 81px;
     }
     .photographer-show-page img {
-        float: none;
-        width: 60%;
-        margin: 3% 20%;
+        width: 30%;
+        left: 50%;
     }
     /* .photographers-display-page {
         height: 2000px;
